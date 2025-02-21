@@ -1,4 +1,4 @@
-package org.example.persistance.migration;
+package org.example.persistence.migration;
 
 
 import liquibase.Liquibase;
@@ -6,7 +6,7 @@ import liquibase.database.jvm.JdbcConnection;
 import liquibase.exception.LiquibaseException;
 import liquibase.resource.ClassLoaderResourceAccessor;
 import lombok.AllArgsConstructor;
-import org.example.persistance.config.ConnectionConfig;
+import org.example.persistence.config.ConnectionConfig;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -15,16 +15,10 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 
-import static java.sql.DriverManager.getConnection;
-
 @AllArgsConstructor
 public class MigrationStrategy {
 
     private final Connection connection;
-
-    public MigrationStrategy(Connection connection) {
-        this.connection = connection;
-    }
 
     public void executeMigration()
     {

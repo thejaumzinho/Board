@@ -1,4 +1,4 @@
-package org.example.persistance.config;
+package org.example.persistence.config;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
